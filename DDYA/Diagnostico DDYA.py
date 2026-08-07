@@ -14,15 +14,15 @@ def main():
 def pedir_numero():
     while True:
         try:
-            cant = int(input("Cuantos numeros vas a ingresar?: "))
+            cant=int(input("Cuantos numeros vas a ingresar?: "))
             break
         except ValueError:
             print("Numero o caracter no valido")
-    num = []
+    num=[]
     for rep in range(cant):
         while True:
             try:
-                n = int(input("Coloque su numero: "))
+                n=int(input("Coloque su numero: "))
                 break
             except ValueError:
                 print("Numero o caracter no valido")
