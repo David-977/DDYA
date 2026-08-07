@@ -12,13 +12,22 @@ def main():
 
 
 def pedir_numero():
-    cant=int(input("Cuantos numeros vas a ingresar?: "))
-    num=[]
+    while True:
+        try:
+            cant = int(input("Cuantos numeros vas a ingresar?: "))
+            break
+        except ValueError:
+            print("Numero o caracter no valido")
+    num = []
     for rep in range(cant):
-        n=int(input("Coloque su numero: "))
+        while True:
+            try:
+                n = int(input("Coloque su numero: "))
+                break
+            except ValueError:
+                print("Numero o caracter no valido")
         num.append(n)
     return num
-
 def par_impar(num):
     print("Punto 2")
     for n in num:
